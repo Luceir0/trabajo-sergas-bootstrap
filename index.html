@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        div {
+            border: 1px solid black;
+            /* margin: 10px;
+            padding: 10px; */
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Bootstrap</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 p-5 my-5 display-6">col-sm-4</div>
+            <div class="col-sm-4 p-5 bg-dark text-white my-5 display-2">col-sm-4</div>
+            <div class="col-sm-4 p-5 my-5 display-1"><mark>col-sm-4</mark></div>
+            <!-- De sm para arriba cada col ocupará 4 de 12 -->
+            <!-- p-5, el padding por todos lados. pt (top) pb (button) -->
+            <!-- Se puede agregar un borde directamente con la etiqueta border -->
+            <!-- Se puede aplicar color con bg-dark(dark, o lo que sea) text-white()white, o lo que sea -->
+            <!-- my-5, margen en eje y . mx-5, eje y-->
+            <!-- display-6, para generar encabezados más destacados -->
+            <!-- <small></small>, para encabezados de tamaño secundario -->
+            <!-- <mark></mark>, para subrayar en amarillo leve -->
+        </div>
+    
+        <div class="row">
+            <div class="col-sm-4">col-sm-4</div>
+            <div class="col-sm-8">col-sm-8</div>
+        </div>
+    
+        <div class="row">
+            <div class="col-sm-3">col-sm-3</div>
+            <div class="col-sm-6">col-sm-6</div>
+            <div class="col-sm-3">col-sm-3</div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS (requied popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
