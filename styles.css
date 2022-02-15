@@ -1,0 +1,163 @@
+body{
+    font-family: 'Lato', sans-serif;
+    color:#2977B5;
+}
+header{
+    width: 100%;
+    background: linear-gradient(to bottom, #2977B5, rgb(109, 161, 177));
+}
+.bg-primary{
+    background: linear-gradient(to bottom, #2977B5, rgb(109, 161, 177));
+  }
+input::placeholder {
+    color: #2977B5 !important;
+  } 
+  .input-icono{
+    background-image: url('./img/lupa.png');
+    background-repeat: no-repeat;
+  background-position: 95% center;
+  background-size: 20px;
+  }
+
+.blue {
+  color:#2977B5;
+}
+
+/* FRONTPAGE */
+
+.frontpageimg {
+    width: 80%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/**/
+
+/* INDEX */
+
+.imgindex {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#hamburger {
+  width: 25px;
+  position: absolute;
+  left: 20px;
+}
+
+.showMenu {
+  transition: 1.5s;
+}
+
+.hideMenu {
+  transform: translate(-100%, 0);
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+#menu {
+  position: absolute;
+  z-index: 9999;
+  background-color: rgb(109, 161, 177);
+  /* transition: 1.5s; */
+  width: 85%;
+  height: 100%;
+  top: 55px;
+  left: 0;
+  overflow: auto;
+}
+
+#userImg {
+  padding-top:10%;
+  width: 30%;
+  color: white;
+}
+
+#username {
+  padding-left: 5%;
+  padding-top: 5%;
+  padding-bottom: 2%
+}
+
+#userId {
+  padding-left: 5%;
+}
+
+.menuActions {
+  width: 90%;
+  height: 40px;
+  /* border: none;
+  color:#2977B5; */
+}
+
+#logout {
+  margin-top: 20vh;
+  background-color: #2977B5;
+}
+
+/**/
+
+/* TABLAS */
+
+p{
+  font-size: smaller;
+}
+.contenedorImagen{
+  float:left;
+  width: 20%;
+}
+.imgTablas{
+  width: 70%;
+}
+.contenedorDatos{
+  float:left;
+  width: 80%;
+}
+.registro{
+  float:left;
+  padding: 2%;
+  border-bottom: 1px solid grey;
+}
+.containerNombre{
+  color:black;
+  float:left;
+  width: 100%;
+}
+.containerDni{
+  color:grey;
+  float:left;
+  width: 100%;
+}
+
+#back {
+  width: 25px;
+  position: absolute;
+  left: 10px;
+  color: black;
+}
+
+/**/
+
+/* CHART */
+
+#myChart {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#chartDiv {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/**/
+
+/* ALTA */
+
+#altaBtn {
+  background-color: #2977B5;
+}
