@@ -8,21 +8,29 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script defer src="script.js"></script>
     <title>SergasMóbil</title>
-    
+
+    <!--chart-->
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js" type="text/javascript"></script>
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
             <div class="p-2 text-center text-white bg-primary "><img id="hamburger" src="./img/menu.png" alt="hamburger" ><img src="./img/logoSergas.png" class="imagenLogo" id="logo"></div>
+            <!-- De sm para arriba cada col ocupará 4 de 12 -->
+            <!-- p-5, el padding por todos lados. pt (top) pb (button) -->
+            <!-- Se puede agregar un borde directamente con la etiqueta border -->
+            <!-- Se puede aplicar color con bg-dark(dark, o lo que sea) text-white()white, o lo que sea -->
+            <!-- my-5, margen en eje y . mx-5, eje y-->
+            <!-- display-6, para generar encabezados más destacados -->
+            <!-- <small></small>, para encabezados de tamaño secundario -->
+            <!-- <mark></mark>, para subrayar en amarillo leve -->
         </div>
 
         <div class="row text-center">
             <div class="p-3 text-center text-white bold bg-dark">TÁBOA DE ESTADÍSTICAS</div>
         </div>
-
-        <canvas id="graficaCovid">
-            
-        </canvas>
+        
+        <div id="grafico" ></div>
         
 
         <div id="menu" class="hideMenu">
@@ -36,62 +44,38 @@
             </div>
 
             <div class="text-center pt-5 pb-2">
-                <button type="button" id="alta" class="btn btn-light px-5 bold blue menuActions hidden">Dar de alta</button>
+                <button type="button" id="alta" class="btn btn-light px-5 bold blue menuActions">Dar de alta</button>
             </div>
 
             <div class="text-center pt-2 pb-2">
                 <button type="button" id="statistics" class="btn btn-light px-5 blue menuActions">Estadísticas</button>
             </div>
 
-            <div class="text-center pt-2 pb-2">
-                <a id="version" class="text-light">Cambiar a versión administrador</a>
-            </div>
-
             <div class="text-center pt-4 pb-3">
                 <button id="logout" type="button" class="btn px-5 bold text-light">PECHAR SESIÓN</button>
             </div>
         </div>
-<script>
-      var graficaCovid = document.getElementById("graficaCovid");
-//Declaramos los datos y colores a usar
-var datosCovid = {
-    labels: [
-        "Contaxios Activos",
-        "Contacto Estreito",
-        "Contaxio Espirado",
-        "No Contaxio"
-    ],
-    datasets: [
-        {
-            data: [1330.3, 860.2, 520.2, 510.2],
-            backgroundColor: [
-                "#D6EAF8",
-                "#7FB3D5",
-                "#85C1E9",
-                "#E5E7E9"
-            ]
-        }]
-};
-//Creamos la grafica indicando el tipo y alguna configuracion
-var pieChart = new Chart(graficaCovid, {
-  type: 'pie',
-  data: datosCovid,
-  options: {
-        plugins: {
-            legend: {
-                labels: {
-                    // This more specific font property overrides the global property
-                    font: {
-                        size: 15,
-                        family:  "'Lato', sans-serif"
-                    }
-                }
-            }
-        }
-    }
-});
-  </script>
-        
+
+        <script>
+            anychart.onDocumentLoad(function () {
+        // create an instance of a pie chart
+        var chart = anychart.pie();
+        // set the data
+        chart.data([
+          ["Contaxios activos", 5],
+          ["Contactos estreitos", 2],
+          ["Contaxios expirados", 2],
+          ["Non contaxiados", 3],
+        ]);
+        // set chart title
+        chart.title("Estados Covid");
+        // set the container element 
+        chart.container("grafico");
+        // initiate chart display
+        chart.draw();
+      });
+    </script>
+
     <!-- Bootstrap JS (requied popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
  
